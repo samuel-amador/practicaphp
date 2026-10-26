@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Web - Contacto</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px 15px;
+            font-family: Arial, sans-serif;
+            background: #eaf6ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .cartel {
+            width: 100%;
+            max-width: 580px;
+            padding: 35px;
+            text-align: center;
+            background: linear-gradient(135deg, #0077b6, #00b4d8);
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .cartel h1 {
+            font-size: 35px;
+            margin: 0 0 15px;
+        }
+
+        .cartel h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .cartel p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        form {
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .campo {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 16px;
+            color: #023e8a;
+            background: white;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #023e8a;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .acciones {
+            text-align: center;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 25px;
+            background: white;
+            color: #0077b6;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .boton:hover {
+            background: #caf0f8;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="cartel">
+        <h1> BIENVENIDO</h1>
+
+        <h2>SISTEMA WEB</h2>
+
+        <p>Gracias por visitar mi sistema.</p>
+
+        <p>Atencion organizada, rapida y segura.</p>
+
+        <p>Completa el formulario para enviarnos tu consulta.</p>
+
+        <form action="procesar.php" method="POST">
+            <div class="campo">
+                <label for="nombre">Nombre completo:</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Escribe tu nombre completo"
+                    maxlength="100"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo electrónico:</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="ejemplo@correo.com"
+                    maxlength="254"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje:</label>
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    placeholder="Escribe tu consulta o pedido"
+                    maxlength="2000"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="acciones">
+                <button type="submit" class="boton">
+                    ENVIAR MENSAJE
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
